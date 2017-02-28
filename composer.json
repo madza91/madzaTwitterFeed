@@ -1,0 +1,10 @@
+{
+    "name": "nemanja/madza-twitter-feed",
+    "authors": [
+        {
+            "name": "Nemanja Madžovski",
+            "email": "nemanja@madza.rs"
+        }
+    ],
+    "require": {}
+}
