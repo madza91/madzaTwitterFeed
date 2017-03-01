@@ -34,3 +34,54 @@ function debug($variable, $die = true, $forceDebugging = false)
 
     }
 }
+
+
+/**
+ * Include and show Controller/View content
+ *
+ * @param $controller
+ */
+function includeController($controller) {
+
+    /*
+     * Defaults
+     */
+    $defaultController = 'landing';
+
+
+    $controllerDir = BASE_DIR . 'controllers/';
+
+    $controller = (empty($controller)) ? $defaultController: $controller;
+
+    $controllerFile = $controllerDir . $controller . '.php';
+
+
+    $isExistingPage = file_exists($controllerFile);
+
+
+    if(!empty($controller) && $isExistingPage){
+        include($controllerFile);
+    } else {
+        include($controllerDir . $defaultController . '.php');
+    }
+
+    echo $template;
+}
+
+
+/**
+ * Get value from form (POST method) by selected key
+ *
+ * @param $key
+ * @param null $default
+ * @return null
+ */
+function getGetValue($key, $default = NULL)
+{
+    if (!empty($key)) {
+        $tempValue = (isset($_GET[$key])) ? $_GET[$key] : $default;
+        return $tempValue;
+    } else {
+        return $default;
+    }
+}

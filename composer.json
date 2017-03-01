@@ -6,5 +6,10 @@
             "email": "nemanja@madza.rs"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "libraries"
+        ]
+    }
 }

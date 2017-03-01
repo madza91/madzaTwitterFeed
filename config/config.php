@@ -24,9 +24,9 @@ $config = [
     'maintenance' => false,
 
     /*
-     * View template
+     * View templates
      */
-    'template' => 'default',
+    'templates' => 'default',
 
     /*
      * Base DIR

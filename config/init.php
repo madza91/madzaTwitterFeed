@@ -13,6 +13,7 @@ session_start();
 
 require_once('config/config.php');
 require_once('twitteroauth/autoload.php');
+require "vendor/autoload.php";
 
 
 global $config;
@@ -22,7 +23,7 @@ global $config;
  */
 $terminal = (isset($_SERVER['SERVER_NAME'])) ? false: true;
 
-$site_template_dir = "{$config['base_url']}templates/{$config['template']}/";
+$site_template_dir = "{$config['base_url']}templates/{$config['templates']}/";
 
 $actual_link = ($terminal) ? false: "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
@@ -34,7 +35,7 @@ define ('BASE_DIR', $config['base_dir']);
 define ('BASE_URL', $config['base_url']);
 define ('MAINTENANCE', $config['maintenance']);
 define ('DEBUGGING', $config['debugging']);
-define ('SITE_TEMPLATE', $config['template']);
+define ('SITE_TEMPLATE', $config['templates']);
 define ('SITE_TEMPLATE_DIR', $site_template_dir);
 define ('ACTUAL_LINK', $actual_link);
 define ('DEV_MODE', false);
