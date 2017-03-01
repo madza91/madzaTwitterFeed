@@ -19,6 +19,11 @@ $defaultTotalResults = 10;
 $defaultScreenName  = 'b92vesti';
 
 
+/*
+ * Instances
+ */
+$tweets = new Tweets();
+$users  = new Users();
 
 
 /*
@@ -40,6 +45,9 @@ $connection = new TwitterOAuth($config['twitter']['consumer_key'], $config['twit
 
 $content = $connection->get("statuses/user_timeline", $options);
 
+$tweets->storeTweets($content);
+
+//debug($content);
 
 
 
@@ -50,3 +58,4 @@ $content = $connection->get("statuses/user_timeline", $options);
 $template->title        = $defaultScreenName . ' - Twitter feed';
 $template->total        = $defaultTotalResults;
 $template->content      = $content;
+$template->active       = 'online';

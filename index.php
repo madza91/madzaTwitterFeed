@@ -16,4 +16,11 @@ require "config/init.php";
 /*
  * Include Controller from `controllers` folder
  */
-includeController('tweets');
+$getPage = getGetValue('page', 'tweets');
+
+
+if ($getPage === 'online') {
+    includeController('tweets');
+} else {
+    includeController('tweets_stored');
+}

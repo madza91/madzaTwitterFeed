@@ -14,6 +14,18 @@
 
 <div class="container">
 
+    <div class="row">
+
+        <div class="col-lg-12 well-lg">
+            <ul class="nav nav-pills">
+                <li role="presentation" <?= ($active == 'stored') ? 'class="active"': ''; ?>><a href="<?= BASE_URL; ?>">Stored Tweets</a></li>
+                <li role="presentation" <?= ($active == 'online') ? 'class="active"': ''; ?>><a href="<?= BASE_URL; ?>index.php?page=online">Online Tweets</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
     <div class="page-header">
         <h1 id="timeline"><?= $title; ?></h1>
     </div>

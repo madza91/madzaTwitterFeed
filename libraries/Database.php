@@ -13,10 +13,11 @@ class Database {
      */
 	public function __construct() {
 
-	    global $database;
+	    global $config;
+
 
 		// Set DSN
-		$dsn = 'mysql:host=' . $database['host'] . ';dbname=' . $database['database'] . ';charset=utf8';
+		$dsn = 'mysql:host=' . $config['db']['host'] . ';dbname=' . $config['db']['database'] . ';charset=utf8';
 
 		// Set options
 		$options = array (
@@ -27,7 +28,7 @@ class Database {
 
 		// Create a new PDO instance
 		try {
-			$this->dbh = new PDO ($dsn, $database['user'], $database['password'], $options);
+			$this->dbh = new PDO ($dsn, $config['db']['user'], $config['db']['password'], $options);
 		}
 
 		// Catch any errors
