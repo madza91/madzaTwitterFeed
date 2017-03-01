@@ -28,7 +28,19 @@
 
     <div class="page-header">
         <h1 id="timeline"><?= $title; ?></h1>
+        <p class="text-muted">
+            <i class="glyphicon glyphicon-eye-open"></i> Showing last <?= $count; ?> results
+        </p>
     </div>
+
+    <?php if($count == 0): ?>
+    <div clas="row">
+        <div class="alert alert-info">
+            <strong>Info!</strong> There is no stored Tweets. Please run <a href="<?= BASE_URL . 'cron.php'; ?>" target="_blank">cron.php</a>.
+        </div>
+    </div>
+    <?php endif; ?>
+
     <ul class="timeline">
         <?php foreach ($content as $key => $tweet) { ?>
 
@@ -45,13 +57,18 @@
                             </div>
                         </div>
 
-
                         <p>
-                            <small class="text-muted"><i class="glyphicon glyphicon-time"></i> <?= $tweet->created_at; ?> via Twitter
+                            <small class="text-muted">
+                                <i class="glyphicon glyphicon-time"></i> <?= $tweet->created_at; ?> via Twitter
                             </small>
                         </p>
                     </div>
                     <div class="timeline-body">
+
+                        <?php if(DEBUGGING): ?>
+                            <p>Tweet ID: <?= $tweet->id; ?></p>
+                        <?php endif; ?>
+
                         <p><?= $tweet->text; ?></p>
                         <hr>
                         <div class="row">

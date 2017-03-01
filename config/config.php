@@ -16,7 +16,7 @@ $config = [
     /*
      * Debugging page, and showing errors
      */
-    'debugging' => true,
+    'debugging' => false,
 
     /*
      * Maintenance
@@ -53,6 +53,7 @@ $config = [
      * Twitter App Tokens
      */
     'twitter' => [
+        'screen_name' => 'b92vesti',
         'consumer_key' => '411TIzlXbKenxMgq0mZWvL0Fk',
         'consumer_secret' => 'K7MVq4cplmEeprSQZGdMdbPoN17jXlqHe0aIG3WuYYGY6gquF4',
         'access_token' => '3035723662-geXoDlWZTeprexMNYHsWY4N3W2OsGvXWpVUNsZ4',

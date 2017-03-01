@@ -11,7 +11,6 @@
  */
 $template = new Template('tweets');
 $tweets = new Tweets();
-$users  = new Users();
 
 /*
  * Config
@@ -22,7 +21,6 @@ $defaultScreenName  = 'b92vesti';
 
 $content = $tweets->getAll();
 
-//$content = [];
 
 
 
@@ -33,4 +31,5 @@ $content = $tweets->getAll();
 $template->title        = 'Database Tweets';
 $template->total        = $defaultTotalResults;
 $template->content      = $content;
+$template->count        = count($content);
 $template->active       = 'stored';

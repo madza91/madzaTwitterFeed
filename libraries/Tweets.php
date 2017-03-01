@@ -142,12 +142,18 @@ class Tweets
     }
 
 
-    /**
-     * @param $user_id
-     */
-    public function getUser($user_id)
+    public function getLastTweetId()
     {
 
+        $this->db->query('SELECT tweet_id FROM tweets ORDER BY tweet_id DESC');
+
+        $result = $this->db->single();
+
+        if ($result) {
+            return $result->tweet_id;
+        }
+
+        return false;
     }
 
 }

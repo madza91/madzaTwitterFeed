@@ -45,9 +45,6 @@ $connection = new TwitterOAuth($config['twitter']['consumer_key'], $config['twit
 
 $content = $connection->get("statuses/user_timeline", $options);
 
-$tweets->storeTweets($content);
-
-//debug($content);
 
 
 
@@ -58,4 +55,5 @@ $tweets->storeTweets($content);
 $template->title        = $defaultScreenName . ' - Twitter feed';
 $template->total        = $defaultTotalResults;
 $template->content      = $content;
+$template->count        = count($content);
 $template->active       = 'online';
