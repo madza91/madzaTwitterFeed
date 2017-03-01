@@ -72,7 +72,7 @@
                         <hr>
                         <?php if(DEBUGGING): ?>
                             <p>Debugging</p>
-                            <p title="Debugging only">Tweet ID: <?= $tweet->tweet_id; ?></p>
+                            <p title="Debugging only">Tweet ID: <?= $tweet->id; ?></p>
                         <?php endif; ?>
                         <hr>
                         <div class="row">
