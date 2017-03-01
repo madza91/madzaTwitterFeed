@@ -15,7 +15,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 /*
  * Config
  */
-$defaultTotalResults = 10;
+$defaultTotalResults = 15;
 $defaultScreenName  = 'b92vesti';
 
 

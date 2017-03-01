@@ -114,7 +114,9 @@ class Tweets
 
         $this->db->query('SELECT t.id, t.tweet_id, t.text, t.retweet_count, t.favorite_count, t.user_id, t.created_at, stored_at, u.user_id, u.name, u.screen_name, u.url, u.profile_image_url FROM tweets t
                             LEFT JOIN users u ON u.user_id = t.user_id
-                            LIMIT :limit');
+                            ORDER BY tweet_id DESC
+                            LIMIT :limit
+                            ');
         $this->db->bind(':limit', $limit);
         $results = $this->db->resultset();
 
