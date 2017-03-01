@@ -16,7 +16,7 @@ $config = [
     /*
      * Debugging page, and showing errors
      */
-    'debugging' => false,
+    'debugging' => true,
 
     /*
      * Maintenance

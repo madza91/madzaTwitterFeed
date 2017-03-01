@@ -54,6 +54,9 @@
                             </div>
                             <div class="col-lg-10">
                                 <h4 class="timeline-title"><?= $tweet->user->name; ?> (@<?= $tweet->user->screen_name; ?>)</h4>
+                                <a href="<?= $tweet->user->url; ?>">
+                                    <i class="glyphicon glyphicon-globe"></i> Website
+                                </a>
                             </div>
                         </div>
 
@@ -65,11 +68,12 @@
                     </div>
                     <div class="timeline-body">
 
-                        <?php if(DEBUGGING): ?>
-                            <p>Tweet ID: <?= $tweet->id; ?></p>
-                        <?php endif; ?>
-
                         <p><?= $tweet->text; ?></p>
+                        <hr>
+                        <?php if(DEBUGGING): ?>
+                            <p>Debugging</p>
+                            <p title="Debugging only">Tweet ID: <?= $tweet->tweet_id; ?></p>
+                        <?php endif; ?>
                         <hr>
                         <div class="row">
                             <div class="col-lg-2"><i class="glyphicon glyphicon-retweet"></i> <?= $tweet->retweet_count; ?></div>
