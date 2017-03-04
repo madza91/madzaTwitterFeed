@@ -14,7 +14,7 @@ Get tweets from twitter and store it in DB.
 * Installed Composer
 
 ## Helpful links
-* [Demo page](http://madza.rs/demo/madzaTwitterFeed/)
+* [Demo page](https://goo.gl/qCqBQN)
 * Twitter Dev page for getting [user timeline](https://dev.twitter.com/rest/reference/get/statuses/user_timeline)
 * CA certificate [Cacert.pem](https://curl.haxx.se/ca/cacert.pem)
 
