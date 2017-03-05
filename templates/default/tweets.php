@@ -20,6 +20,7 @@
             <ul class="nav nav-pills">
                 <li role="presentation" <?= ($active == 'stored') ? 'class="active"': ''; ?>><a href="<?= BASE_URL; ?>">Stored Tweets</a></li>
                 <li role="presentation" <?= ($active == 'online') ? 'class="active"': ''; ?>><a href="<?= BASE_URL; ?>index.php?page=online">Online Tweets</a></li>
+                <li role="presentation" class="pull-right alert-info"><a href="<?= BASE_URL; ?>cron.php" target="_blank">Update (run cron.php) <sup><i class="glyphicon glyphicon-new-window"></i></sup></a></li>
             </ul>
         </div>
 
